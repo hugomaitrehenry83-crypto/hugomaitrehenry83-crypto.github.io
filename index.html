@@ -64,11 +64,11 @@
     .proj { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.1rem 1.25rem; transition: border-color 0.2s; }
     .proj:hover { border-color: var(--border2); }
     .badge { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; margin-bottom: 0.65rem; }
-    .b-ml  { background: var(--info-bg);    color: var(--info-text); }
-    .b-dl  { background: var(--warn-bg);    color: var(--warn-text); }
-    .b-data{ background: var(--success-bg); color: var(--success-text); }
+    .b-ml   { background: var(--info-bg);    color: var(--info-text); }
+    .b-dl   { background: var(--warn-bg);    color: var(--warn-text); }
+    .b-data { background: var(--success-bg); color: var(--success-text); }
     .b-crypto { background: var(--bg2); color: var(--text2); }
-    .b-rag { background: #EEEDFE; color: #3C3489; }
+    .b-rag  { background: #EEEDFE; color: #3C3489; }
     @media (prefers-color-scheme: dark) { .b-rag { background: #26215C; color: #CECBF6; } }
     .proj-title { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 400; line-height: 1.3; margin-bottom: 5px; }
     .proj-desc { font-size: 12px; font-weight: 300; line-height: 1.7; color: var(--text2); }
@@ -85,29 +85,6 @@
     .cert { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 0.75rem 1rem; }
     .cert-issuer { font-size: 11px; font-weight: 500; color: var(--text2); margin-bottom: 2px; }
     .cert-name { font-size: 13px; }
-
-    .chat-box { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
-    .chat-messages { padding: 1.25rem; display: flex; flex-direction: column; gap: 14px; min-height: 300px; max-height: 440px; overflow-y: auto; }
-    .msg { display: flex; gap: 10px; align-items: flex-start; }
-    .msg-avatar { width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; margin-top: 1px; }
-    .msg-avatar.hugo { background: var(--bg); border: 0.5px solid var(--border2); color: var(--text2); }
-    .msg-avatar.user { background: var(--text); color: var(--bg); }
-    .msg-bubble { font-size: 13px; font-weight: 300; line-height: 1.8; color: var(--text); max-width: 600px; }
-    .msg-bubble.user { color: var(--text2); }
-    .chat-suggestions { padding: 0 1.25rem 1rem; display: flex; flex-wrap: wrap; gap: 7px; }
-    .sugg { font-size: 11px; padding: 5px 13px; border-radius: 100px; border: 0.5px solid var(--border2); background: var(--bg); color: var(--text2); cursor: pointer; transition: all 0.15s; white-space: nowrap; font-family: 'DM Sans', sans-serif; }
-    .sugg:hover { background: var(--bg2); color: var(--text); }
-    .chat-input-row { display: flex; gap: 8px; padding: 0.9rem 1.25rem; border-top: 0.5px solid var(--border); background: var(--bg); }
-    .chat-inp { flex: 1; font-size: 13px; padding: 8px 12px; border-radius: var(--radius); border: 0.5px solid var(--border2); background: var(--bg2); color: var(--text); font-family: 'DM Sans', sans-serif; outline: none; }
-    .chat-inp:focus { border-color: var(--text3); }
-    .chat-send { font-size: 13px; padding: 8px 18px; border-radius: var(--radius); border: none; background: var(--text); color: var(--bg); cursor: pointer; font-family: 'DM Sans', sans-serif; transition: opacity 0.15s; }
-    .chat-send:hover { opacity: 0.85; }
-    .chat-send:disabled { opacity: 0.35; cursor: default; }
-    .typing { display: flex; align-items: center; gap: 4px; padding: 4px 0; }
-    .typing span { width: 5px; height: 5px; border-radius: 50%; background: var(--text3); animation: bounce 1.2s infinite; }
-    .typing span:nth-child(2) { animation-delay: 0.2s; }
-    .typing span:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes bounce { 0%,60%,100%{transform:translateY(0);} 30%{transform:translateY(-5px);} }
 
     footer { border-top: 0.5px solid var(--border); padding: 2.5rem 0 3.5rem; margin-top: 1rem; text-align: center; }
     .footer-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 0.5rem; }
@@ -130,7 +107,7 @@
       <a href="#about">À propos</a>
       <a href="#skills">Compétences</a>
       <a href="#projects">Projets</a>
-      <a href="#chat">Me parler</a>
+      <a href="#formation">Formation</a>
     </div>
   </div>
 </nav>
@@ -211,7 +188,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="formation">
     <div class="section-label">Formation</div>
     <div class="edu-item">
       <div class="edu-date">2025 — présent</div>
@@ -235,30 +212,6 @@
     </div>
   </section>
 
-  <section id="chat">
-    <div class="section-label">Posez-moi vos questions directement</div>
-    <div class="chat-box">
-      <div class="chat-messages" id="chat-messages">
-        <div class="msg">
-          <div class="msg-avatar hugo">HM</div>
-          <div class="msg-bubble">Bonjour ! Je suis Hugo Maitrehenry, étudiant en cycle ingénieur à l'ESILV en spécialisation Data & IA. Je recherche une alternance à partir de septembre 2026. N'hésitez pas à me poser vos questions sur mon parcours ou mes projets !</div>
-        </div>
-      </div>
-      <div class="chat-suggestions">
-        <span class="sugg" onclick="ask('Quels sont tes projets les plus importants ?')">Tes projets clés ?</span>
-        <span class="sugg" onclick="ask('Pourquoi tu t\'es orienté vers la Data / IA ?')">Pourquoi Data/IA ?</span>
-        <span class="sugg" onclick="ask('Quelles sont tes compétences techniques ?')">Compétences ?</span>
-        <span class="sugg" onclick="ask('Comment tu te décrirais en quelques mots ?')">Ta personnalité ?</span>
-        <span class="sugg" onclick="ask('Tu vises quel type de poste en alternance ?')">Tes ambitions ?</span>
-        <span class="sugg" onclick="ask('Comment te contacter ?')">Te contacter ?</span>
-      </div>
-      <div class="chat-input-row">
-        <input class="chat-inp" id="chat-inp" placeholder="Posez une question à Hugo..." onkeydown="if(event.key==='Enter'){send();}">
-        <button class="chat-send" id="send-btn" onclick="send()">Envoyer</button>
-      </div>
-    </div>
-  </section>
-
   <footer>
     <div class="footer-name">Hugo Maitrehenry</div>
     <div class="footer-sub">Étudiant ESILV · Alternance Data / IA · Septembre 2026</div>
@@ -270,131 +223,6 @@
   </footer>
 
 </div>
-
-<script>
-const SYSTEM = `Tu es Hugo Maitrehenry, étudiant en cycle ingénieur A3 à l'ESILV Paris, spécialisation Data & Intelligence Artificielle. Tu réponds à un recruteur qui visite ton portfolio en ligne.
-
-PROFIL COMPLET :
-- A grandi à l'étranger : Mayotte (moyenne section à CE1) puis Tunis (CE2), puis France. Cette expérience lui a donné une vraie curiosité pour le monde, une grande adaptabilité et une ouverture d'esprit naturelle.
-- Formation : Bac Très Bien (Maths, Physique-Chimie, spé Cinéma-Audiovisuel) → CPGE MPSI puis MP (Lycée d'Umont-Durville, Toulon, 2023-2025) → Cycle ingénieur ESILV Paris A3 (2025-présent)
-- La prépa a été difficile, surtout le milieu de la première année. Hugo ne voulait pas abandonner — il a tenu grâce à sa persévérance et sa détermination.
-- Recherche une alternance Data/IA/ML à partir de septembre 2026
-- Email : hugomaitrehenry.pro@gmail.com | Tél : 0777836921
-- LinkedIn : linkedin.com/in/hugo-maitrehenry-13636b3a1 | GitHub : github.com/hugomaitrehenry83-crypto
-
-PASSIONS & MOTIVATIONS :
-- Ce qui l'a attiré vers la Data/IA : la fascination pour le fonctionnement interne des grands LLMs comme ChatGPT ou Claude — comprendre comment ces systèmes fonctionnent vraiment, pas juste les utiliser.
-- Domaines de prédilection : Deep Learning et LLMs avant tout.
-- Secteurs visés : finance, industrie, jeux vidéos.
-- Type de structure : grand groupe ou startup — l'important est de travailler sur des choses qui évoluent constamment et ont un fort impact.
-- Se décrit en 3 mots : Passionné, Curieux, Persévérant.
-
-COMPÉTENCES TECHNIQUES :
-- Python (pandas, numpy, matplotlib, sklearn) — niveau avancé
-- Deep Learning (réseaux de neurones implémentés from scratch, back/forward propagation)
-- RAG / LLM (système RAG avec Llama 3.1 405B)
-- SQL / mySQL, R, bases Solidity, Git, JupyterLab
-- Anglais B2
-
-PROJETS :
-1. KNN sans Sklearn (mars 2026, Kaggle) — implémentation from scratch avec cross-validation
-2. Réseau de neurones 2 couches from scratch (déc. 2025) — reconnaissance d'images
-3. Système RAG avec Llama 3.1 405B — retrieval-augmented generation sur données web
-4. Classification spam/ham Naive Bayes — NLP
-5. Algorithme de trading Bitcoin (nov. 2025) — croisement moyennes mobiles, yfinance
-6. Hackathon blockchain XRPL (nov. 2025) — solutions écologiques
-7. Pipeline d'alertes web (déc. 2025) — pandas, visualisations
-
-CERTIFICATIONS :
-- Udemy : Data Analysis with Pandas and Python (jan. 2026)
-- IBM : Data Analysis with Python (jan. 2026)
-
-CENTRES D'INTÉRÊT :
-- Musique : diplôme de cycle 2 de conservatoire
-- Sport : callisthénie, poids du corps
-- Cinéma : spécialité suivie en première
-
-INSTRUCTIONS :
-- Réponds TOUJOURS à la première personne, comme si tu étais Hugo en entretien
-- Ton naturel, chaleureux, professionnel — comme un vrai échange humain
-- Sois honnête sur ton niveau (tu es étudiant motivé, pas expert senior)
-- Mets en avant tes projets concrets quand c'est pertinent
-- Mentionne ton vécu à l'étranger si c'est pertinent pour parler d'adaptabilité
-- Réponses courtes à moyennes (3-5 phrases max), conversationnelles, pas de listes à puces
-- Ne dis JAMAIS que tu es une IA — tu es Hugo, point.
-- Si on te demande un contact, donne-le directement`;
-
-const history = [];
-
-function scrollBottom() {
-  const box = document.getElementById('chat-messages');
-  box.scrollTop = box.scrollHeight;
-}
-
-function addMsg(role, text) {
-  const box = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'msg';
-  const isHugo = role === 'assistant';
-  div.innerHTML = '<div class="msg-avatar ' + (isHugo ? 'hugo' : 'user') + '">' + (isHugo ? 'HM' : 'R') + '</div><div class="msg-bubble ' + (isHugo ? '' : 'user') + '">' + text.replace(/\n/g, '<br>') + '</div>';
-  box.appendChild(div);
-  scrollBottom();
-}
-
-function showTyping() {
-  const box = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'msg';
-  div.id = 'typing';
-  div.innerHTML = '<div class="msg-avatar hugo">HM</div><div class="msg-bubble"><div class="typing"><span></span><span></span><span></span></div></div>';
-  box.appendChild(div);
-  scrollBottom();
-}
-
-function removeTyping() {
-  const t = document.getElementById('typing');
-  if (t) t.remove();
-}
-
-async function ask(q) {
-  document.getElementById('chat-inp').value = q;
-  await send();
-}
-
-async function send() {
-  const inp = document.getElementById('chat-inp');
-  const btn = document.getElementById('send-btn');
-  const text = inp.value.trim();
-  if (!text) return;
-  inp.value = '';
-  btn.disabled = true;
-  addMsg('user', text);
-  history.push({ role: 'user', content: text });
-  showTyping();
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        system: SYSTEM,
-        messages: history
-      })
-    });
-    const data = await res.json();
-    const reply = data.content?.map(b => b.text || '').join('') || "Désolé, je n'ai pas pu répondre.";
-    removeTyping();
-    addMsg('assistant', reply);
-    history.push({ role: 'assistant', content: reply });
-  } catch(e) {
-    removeTyping();
-    addMsg('assistant', 'Une erreur est survenue. Contacte-moi directement à hugomaitrehenry.pro@gmail.com');
-  }
-  btn.disabled = false;
-  inp.focus();
-}
-</script>
 
 </body>
 </html>
